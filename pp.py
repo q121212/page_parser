@@ -24,7 +24,8 @@ def extract_data_from_page(url, days_eis):
     rawdata = rawd.decode('utf-8', 'ignore')
   
   # this line of code at first stage read data from settings file, at second stage - extract (decrypt) encrypted data
-  d = encrypting.decrypt(encrypting.read_settings())
+  d = rawdata.split(encrypting.decrypt(encrypting.read_settings()))
+  
   try:
     rawdata = d[1][27:-69]
     
