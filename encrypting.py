@@ -29,7 +29,7 @@ def decrypt(arr):
   first, second = [], []
   for i in arr[::-1]:
       first.append('e'.join(i))
-  print('first: ', first)
+  # print('first: ', first)
   second = 'm'.join(first)
   return second
 
